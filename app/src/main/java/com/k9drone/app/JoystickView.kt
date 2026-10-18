@@ -35,11 +35,11 @@ class JoystickView @JvmOverloads constructor(
         style = Paint.Style.FILL
     }
     private val stickPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = 0xAAFFFFFF
+        color = 0xAAFFFFFF.toInt()
         style = Paint.Style.FILL
     }
     private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = 0x88FFFFFF
+        color = 0x88FFFFFF.toInt()
         style = Paint.Style.STROKE
         strokeWidth = 3f
     }
