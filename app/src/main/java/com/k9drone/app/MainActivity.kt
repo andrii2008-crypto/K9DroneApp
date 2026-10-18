@@ -230,6 +230,17 @@ class MainActivity : AppCompatActivity() {
         binding.tvStatus.text = text
     }
 
+    private fun bindToWifi() {
+    val cm = getSystemService(android.content.Context.CONNECTIVITY_SERVICE)
+            as android.net.ConnectivityManager
+    for (n in cm.allNetworks) {
+        val caps = cm.getNetworkCapabilities(n) ?: continue
+        if (caps.hasTransport(android.net.NetworkCapabilities.TRANSPORT_WIFI)) {
+            cm.bindProcessToNetwork(n)
+            return
+        }
+    }
+    
     override fun onDestroy() {
         disconnect()
         super.onDestroy()
