@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.K9DroneApp" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorPrimaryContainer">#1565C0</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.K9DroneApp.Fullscreen" parent="Theme.K9DroneApp">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>
