@@ -141,7 +141,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun connect() {
-        updateStatus("Поиск дрона…")
+    bindToWifi()
+    updateStatus("Поиск дрона…")
         // Try common IPs
         Thread {
             var found: String? = null
