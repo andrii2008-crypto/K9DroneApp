@@ -220,11 +220,9 @@ class DroneController(
         }
     }
 
-    private fun sendRaw(data: ByteArray) {
-        val sock = socket ?: return
-        val packet = DatagramPacket(data, data.size, address, controlPort)
-        sock.send(packet)
-    }
+    private fun connect() {
+    bindToWifi()
+    updateStatus("Поиск дрона…")
 
     fun setSticks(r: Int, p: Int, t: Int, y: Int) {
         roll = r.coerceIn(0, 255)
